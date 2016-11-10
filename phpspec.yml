@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: PruebaLara
+        psr4_prefix: PruebaLara
         src_path: app

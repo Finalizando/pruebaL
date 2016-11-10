@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace PruebaLara\Http\Controllers\Auth;
 
-use App\User;
+use PruebaLara\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use PruebaLara\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller

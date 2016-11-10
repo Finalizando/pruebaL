@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace PruebaLara\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use PruebaLara\Http\Requests;
+use PruebaLara\Http\Controllers\Controller;
 
 class TestController extends Controller
 {

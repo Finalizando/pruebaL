@@ -11,6 +11,12 @@
 | post, get, put, delete
 */
 
+Route::get('controlador', 'PruebaController@index');
+Route::get('nombre_controlador/{nombre}', 'PruebaController@nombre');
+
+Route::resource('movie', 'MovieController');
+
+
 Route::get('prueba', function(){
 	return "Hola desde routes.php";
 });
@@ -30,3 +36,8 @@ Route::get('/', function () {
 Route::get('pruebas', [
 	'uses' => 'TestController@index'
 ]);
+
+//codFaci
+Route::group(['prefix' => 'admin'], function(){
+	Route::resource('users', 'UsersController');
+});

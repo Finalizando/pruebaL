@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use PruebaLara\Http\Requests;
 use PruebaLara\Http\Controllers\Controller;
 
-class UsersController extends Controller
+class UsuarioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,10 +26,8 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
-      //  dd('Hola esto es un mensaje');
-       // return view('admin.users.create');
-        return View::make('usuario/form_user');
+        //vamos a crear la carpeta usuario con el metodo create
+        return view('usuario.create');
     }
 
     /**

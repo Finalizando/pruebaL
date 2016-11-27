@@ -11,8 +11,25 @@
 | post, get, put, delete
 */
 
+//PARA PDF
+Route::get('pdf', 'PdfController@invoice');
+//PARA PDF
+
+
+//video crud, desde tinker
+Route::resource('usuario', 'UsuarioController');
+
 Route::get('controlador', 'PruebaController@index');
 Route::get('nombre_controlador/{nombre}', 'PruebaController@nombre');
+
+//ver boton
+Route::get('create_user', function () {
+    return view('/usuario/create');
+});
+Route::get('formulario_u', function () {
+    return view('/usuario/form_user');
+});
+
 
 Route::resource('movie', 'MovieController');
 

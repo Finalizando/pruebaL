@@ -2,3 +2,6 @@
 /node_modules
 .env
 server.php
+/storage
+/app/Http/routes.php
+/resources/views/usuario

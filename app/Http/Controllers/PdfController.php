@@ -6,18 +6,48 @@ use Illuminate\Http\Request;
 
 use PruebaLara\Http\Requests;
 use PruebaLara\Http\Controllers\Controller;
+use PruebaLara\user;
 
-class UsersController extends Controller
+class PdfController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
+
+    //Ej de styde.net
+        public function invoice() 
+    {
+        $data = $this->getData();
+        $date = date('Y-m-d');
+        $invoice = "2222";
+        $view =  \View::make('pdf.invoice', compact('data', 'date', 'invoice'))->render();
+        $pdf = \App::make('dompdf.wrapper');
+        $pdf->loadHTML($view);
+        return $pdf->stream('invoice');
+    }
+
+    public function getData() 
+    {
+        $data =  [
+            'quantity'      => '1' ,
+            'description'   => 'some ramdom text',
+            'price'   => '500',
+            'total'     => '500'
+        ];
+        return $data;
+    }
+    //Ej de styde.net
+
+
+    
     public function index()
     {
         //
     }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -27,9 +57,6 @@ class UsersController extends Controller
     public function create()
     {
         //
-      //  dd('Hola esto es un mensaje');
-       // return view('admin.users.create');
-        return View::make('usuario/form_user');
     }
 
     /**
@@ -87,4 +114,7 @@ class UsersController extends Controller
     {
         //
     }
+
+*
+*/
 }
